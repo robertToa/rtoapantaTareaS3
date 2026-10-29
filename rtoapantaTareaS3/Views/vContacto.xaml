@@ -38,6 +38,9 @@
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="8">
+            <Image Source="uisraellogo.png"
+                   HeightRequest="120"
+                   HorizontalOptions="Center" />
             <Label Text="Registro de contacto"
                    FontSize="24"
                    FontAttributes="Bold"
