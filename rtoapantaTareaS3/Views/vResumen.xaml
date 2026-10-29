@@ -3,25 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="rtoapantaTareaS3.Views.vResumen"
              Title="Resumen">
+    <ContentPage.Resources>
+        <Style x:Key="ResumenTituloStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,0,0,16" />
+        </Style>
+
+        <Style x:Key="ResumenDatoStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Gray900}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="12,8" />
+            <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        </Style>
+
+        <Style x:Key="ResumenIessStyle" TargetType="Label" BasedOn="{StaticResource ResumenDatoStyle}">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style x:Key="ResumenBotonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Margin" Value="0,20,0,0" />
+            <Setter Property="Padding" Value="14,12" />
+        </Style>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="12">
             <Label Text="Resumen de datos"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   Margin="0,0,0,12" />
+                   Style="{StaticResource ResumenTituloStyle}" />
 
-            <Label x:Name="TipoIdentificacionLabel" />
-            <Label x:Name="IdentificacionLabel" />
-            <Label x:Name="NombresLabel" />
-            <Label x:Name="ApellidosLabel" />
-            <Label x:Name="FechaLabel" />
-            <Label x:Name="CorreoLabel" />
-            <Label x:Name="SalarioLabel" />
-            <Label x:Name="IessLabel" />
+            <Label x:Name="TipoIdentificacionLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="IdentificacionLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="NombresLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="ApellidosLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="FechaLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="CorreoLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="SalarioLabel" Style="{StaticResource ResumenDatoStyle}" />
+            <Label x:Name="IessLabel" Style="{StaticResource ResumenIessStyle}" />
 
             <Button Text="Exportar resumen a TXT"
                     Clicked="OnExportarClicked"
-                    Margin="0,16,0,0" />
+                    Style="{StaticResource ResumenBotonStyle}" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

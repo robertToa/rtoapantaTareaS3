@@ -3,6 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="rtoapantaTareaS3.Views.vContacto"
              Title="Datos de contacto">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="Margin" Value="0,0,0,8" />
+            <Setter Property="HeightRequest" Value="48" />
+            <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        </Style>
+
+        <Style TargetType="Picker">
+            <Setter Property="Margin" Value="0,0,0,8" />
+            <Setter Property="HeightRequest" Value="48" />
+            <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="0,0,0,8" />
+            <Setter Property="HeightRequest" Value="48" />
+            <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0,16,0,0" />
+            <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="8">
             <Label Text="Registro de contacto"
